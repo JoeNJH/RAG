@@ -57,9 +57,6 @@ class LLMClient:
         embeddings: List[List[float]] = []
         clean_texts = [t if t and t.strip() else "empty" for t in texts]
 
-        # DashScope/OpenAI-compatible embedding endpoint has a strict batch-size limit.
-        # text-embedding-v4 returns: "batch size ... should not be larger than 10"
-        # when more than 10 input strings are sent in one request.
         effective_batch_size = min(batch_size or EMBEDDING_BATCH_SIZE, 10)
 
         for start in range(0, len(clean_texts), effective_batch_size):
@@ -85,29 +82,34 @@ class LLMClient:
 
         messages: List[Dict[str, Any]] = [
             {
-                "role": "system",
-                "content": (
-                    "You are helping build a personalised multimodal Java programming knowledge base. "
-                    "Describe the image as searchable evidence. Focus on Java, Spring Boot, IDE, error messages, "
-                    "architecture layers, diagrams, arrows, labels, and any visible text. Be concise but specific."
-                ),
-            },
-            {
                 "role": "user",
                 "content": [
                     {
                         "type": "text",
                         "text": (
-                            "Generate a detailed caption for this image. Include visible error messages, module names, "
-                            "class names, architecture relationships, and likely topic keywords."
+                            "You are helping build a personalised multimodal Java programming knowledge base. "
+                            "Describe this image as searchable evidence. Focus on Java, Spring Boot, IDE screenshots, "
+                            "error messages, architecture layers, diagrams, arrows, labels, and visible text. "
+                            "Generate a concise but specific caption. Include module names, class names, error messages, "
+                            "architecture relationships, and likely topic keywords if visible."
                         ),
                     },
-                    {"type": "image_url", "image_url": {"url": data_url}},
+                    {
+                        "type": "image_url",
+                        "image_url": {
+                            "url": data_url
+                        },
+                    },
                 ],
-            },
+            }
         ]
-        return self.chat(messages=messages, model=VISION_MODEL_NAME, temperature=0.1, max_tokens=500)
 
+        return self.chat(
+            messages=messages,
+            model=VISION_MODEL_NAME,
+            temperature=0.1,
+            max_tokens=500,
+        )
 
 _client: Optional[LLMClient] = None
 
