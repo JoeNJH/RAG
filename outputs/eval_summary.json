@@ -1,0 +1,146 @@
+{
+  "B0_plain_llm": {
+    "num_questions": 12,
+    "recall_at_3": 0.0,
+    "task_success": 0.75,
+    "groundedness": 0.767,
+    "avg_latency": 16.564,
+    "avg_token_usage": 695.2,
+    "avg_tool_calls": 1.0,
+    "by_family": {
+      "factual": {
+        "task_success": 1.0,
+        "groundedness": 0.95,
+        "recall_at_3": 0.0
+      },
+      "cross_modal": {
+        "task_success": 0.333,
+        "groundedness": 0.45,
+        "recall_at_3": 0.0
+      },
+      "analytical": {
+        "task_success": 1.0,
+        "groundedness": 0.967,
+        "recall_at_3": 0.0
+      },
+      "follow_up": {
+        "task_success": 0.5,
+        "groundedness": 0.575,
+        "recall_at_3": 0.0
+      },
+      "debugging": {
+        "task_success": 1.0,
+        "groundedness": 0.95,
+        "recall_at_3": 0.0
+      }
+    }
+  },
+  "B1_text_only_rag": {
+    "num_questions": 12,
+    "recall_at_3": 0.417,
+    "task_success": 0.667,
+    "groundedness": 0.655,
+    "avg_latency": 7.628,
+    "avg_token_usage": 1313.2,
+    "avg_tool_calls": 2.0,
+    "by_family": {
+      "factual": {
+        "task_success": 0.667,
+        "groundedness": 0.55,
+        "recall_at_3": 0.667
+      },
+      "cross_modal": {
+        "task_success": 0.667,
+        "groundedness": 0.983,
+        "recall_at_3": 0.0
+      },
+      "analytical": {
+        "task_success": 1.0,
+        "groundedness": 0.386,
+        "recall_at_3": 0.667
+      },
+      "follow_up": {
+        "task_success": 0.5,
+        "groundedness": 0.7,
+        "recall_at_3": 0.5
+      },
+      "debugging": {
+        "task_success": 0.0,
+        "groundedness": 0.7,
+        "recall_at_3": 0.0
+      }
+    }
+  },
+  "B2_multimodal_rag": {
+    "num_questions": 12,
+    "recall_at_3": 0.833,
+    "task_success": 0.417,
+    "groundedness": 0.621,
+    "avg_latency": 7.762,
+    "avg_token_usage": 995.4,
+    "avg_tool_calls": 2.0,
+    "by_family": {
+      "factual": {
+        "task_success": 0.667,
+        "groundedness": 0.75,
+        "recall_at_3": 0.667
+      },
+      "cross_modal": {
+        "task_success": 0.333,
+        "groundedness": 0.567,
+        "recall_at_3": 1.0
+      },
+      "analytical": {
+        "task_success": 0.333,
+        "groundedness": 0.583,
+        "recall_at_3": 0.667
+      },
+      "follow_up": {
+        "task_success": 0.0,
+        "groundedness": 0.45,
+        "recall_at_3": 1.0
+      },
+      "debugging": {
+        "task_success": 1.0,
+        "groundedness": 0.85,
+        "recall_at_3": 1.0
+      }
+    }
+  },
+  "B3_final_langgraph_agent": {
+    "num_questions": 12,
+    "recall_at_3": 0.833,
+    "task_success": 0.75,
+    "groundedness": 0.787,
+    "avg_latency": 15.352,
+    "avg_token_usage": 3225.5,
+    "avg_tool_calls": 6.33,
+    "by_family": {
+      "factual": {
+        "task_success": 0.333,
+        "groundedness": 0.533,
+        "recall_at_3": 0.667
+      },
+      "cross_modal": {
+        "task_success": 1.0,
+        "groundedness": 0.9,
+        "recall_at_3": 1.0
+      },
+      "analytical": {
+        "task_success": 1.0,
+        "groundedness": 0.867,
+        "recall_at_3": 1.0
+      },
+      "follow_up": {
+        "task_success": 0.5,
+        "groundedness": 0.875,
+        "recall_at_3": 0.5
+      },
+      "debugging": {
+        "task_success": 1.0,
+        "groundedness": 0.8,
+        "recall_at_3": 1.0
+      }
+    }
+  }
+}
