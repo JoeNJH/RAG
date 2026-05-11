@@ -1,0 +1,16 @@
+{
+  "project": "A3 Java Programming Assistant",
+  "domain": "personalised multimodal Java programming question answering",
+  "num_pdf_files": 4,
+  "num_image_files": 4,
+  "num_text_chunks": 2817,
+  "num_image_chunks": 4,
+  "num_all_chunks": 2821,
+  "modalities": [
+    "text",
+    "image"
+  ],
+  "chunk_size": 900,
+  "chunk_overlap": 150,
+  "chroma_count": 2821
+}
