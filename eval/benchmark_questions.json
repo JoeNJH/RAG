@@ -1,0 +1,86 @@
+[
+  {
+    "id": "q01",
+    "family": "factual",
+    "question": "According to my Java core notes, what is the difference between ArrayList and LinkedList?",
+    "gold_answer": "ArrayList is usually better for random access, while LinkedList is more suitable for frequent insertions and deletions when node references are available.",
+    "gold_evidence": ["java_core_notes.pdf"]
+  },
+  {
+    "id": "q02",
+    "family": "factual",
+    "question": "According to my Spring Boot notes, what role does the Controller layer play?",
+    "gold_answer": "The Controller layer receives HTTP requests, validates or parses request parameters, and delegates business logic to the Service layer.",
+    "gold_evidence": ["spring_boot_notes.pdf"]
+  },
+  {
+    "id": "q03",
+    "family": "factual",
+    "question": "According to my Java error notes, what should I check when a ClassNotFoundException occurs?",
+    "gold_answer": "Check whether the dependency is included, whether the class name and package are correct, and whether the runtime classpath contains the required jar.",
+    "gold_evidence": ["common_java_errors.pdf"]
+  },
+  {
+    "id": "q04",
+    "family": "cross_modal",
+    "question": "Which image or diagram shows the Controller-Service-Mapper architecture in my Java backend materials?",
+    "gold_answer": "The Controller-Service-Mapper architecture diagram shows the backend layered structure from request handling to database access.",
+    "gold_evidence": ["controller_service_mapper_architecture.png"]
+  },
+  {
+    "id": "q05",
+    "family": "cross_modal",
+    "question": "Which screenshot shows the Maven dependency error, and what is the likely issue?",
+    "gold_answer": "The Maven dependency error screenshot indicates a dependency version or transitive dependency conflict that should be inspected in the effective POM.",
+    "gold_evidence": ["maven_dependency_error.png"]
+  },
+  {
+    "id": "q06",
+    "family": "cross_modal",
+    "question": "Which image shows the Spring Boot project structure, and what modules or folders are visible?",
+    "gold_answer": "The Spring Boot project structure screenshot shows the project packages or folders such as controller, service, mapper, entity, config, or resources depending on the captured project.",
+    "gold_evidence": ["spring_boot_project_structure.png"]
+  },
+  {
+    "id": "q07",
+    "family": "analytical",
+    "question": "Based on my Spring Boot notes and architecture diagram, explain how a request flows from Controller to database.",
+    "gold_answer": "A request reaches the Controller, the Controller calls the Service for business logic, the Service uses the Mapper or repository layer, and the Mapper communicates with the database.",
+    "gold_evidence": ["spring_boot_notes.pdf", "controller_service_mapper_architecture.png"]
+  },
+  {
+    "id": "q08",
+    "family": "analytical",
+    "question": "Based on my notes and error screenshot, why might a NoSuchMethodError happen after adding a new dependency?",
+    "gold_answer": "A NoSuchMethodError after adding a dependency is often caused by binary incompatibility, version mismatch, or transitive dependency conflict at runtime.",
+    "gold_evidence": ["common_java_errors.pdf", "maven_dependency_error.png"]
+  },
+  {
+    "id": "q09",
+    "family": "analytical",
+    "question": "Compare the responsibilities of Controller, Service, and Mapper in my backend materials.",
+    "gold_answer": "Controller handles HTTP requests, Service contains business logic, and Mapper handles database access or SQL mapping.",
+    "gold_evidence": ["spring_boot_notes.pdf", "controller_service_mapper_architecture.png"]
+  },
+  {
+    "id": "q10",
+    "family": "follow_up",
+    "question": "Based on my previous question about Maven dependency errors, what should I check next?",
+    "gold_answer": "Check dependency versions, transitive dependencies, dependency tree or effective POM, and whether the runtime version matches the compile-time version.",
+    "gold_evidence": ["common_java_errors.pdf", "maven_dependency_error.png"]
+  },
+  {
+    "id": "q11",
+    "family": "follow_up",
+    "question": "I just asked about Spring Boot layers. What should I revise next in my Java backend notes?",
+    "gold_answer": "Revise request mapping, service-layer business logic, mapper/database access, dependency injection, and common debugging cases across the layers.",
+    "gold_evidence": ["spring_boot_notes.pdf", "controller_service_mapper_architecture.png"]
+  },
+  {
+    "id": "q12",
+    "family": "debugging",
+    "question": "According to my Java debugging materials, how should I investigate a MySQL connection error in a Spring Boot project?",
+    "gold_answer": "Check the JDBC URL, username/password, database service status, driver dependency, network/port access, and Spring datasource configuration.",
+    "gold_evidence": ["common_java_errors.pdf", "mysql_connection_error.png"]
+  }
+]
